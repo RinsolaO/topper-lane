@@ -15,6 +15,17 @@ body {
 a {
     text-decoration: none;
     color: #000000;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+a:hover {
+    transform: scale(1.08);
+    /* display: none; */
 }
 
 ul {
@@ -57,6 +68,8 @@ ul {
     opacity: 100%;
 }
 
+
+
 @media (max-width: 768px) {
     .logo {
         width: 80%;
@@ -86,6 +99,10 @@ ul {
     margin: 8rem auto;
 }
 
+.annouce a {
+    color: #41B5AC;
+}
+
 .annouce-container {
     display: flex;
     flex-direction: column;
@@ -107,6 +124,16 @@ button.get-in-touch {
     color: #41B5AC;
     font-size: 30px;
     font-weight: 600;
+    transition: all .5s;
+}
+
+button.get-in-touch:hover {
+    background-color: #41B5AC;
+}
+
+
+button.get-in-touch:hover a {
+    color: #fff;
 }
 
 /* Media Queries */
@@ -228,16 +255,24 @@ button.get-in-touch {
     position: relative;
 }
 
+
 .about-left .contact::after {
     content: "";
-    width: 140px;
+    width: 130px;
     background-color: #41B5AC;
     height: 2px;
     position: absolute;
     top: 3.5rem;
     left: 0;
+    transition: all .3s;
+}
+.about-left .contact:hover{
+   transform: scale(1);
 }
 
+.about-left .contact:hover::after{
+    width: 200px;
+ }
 .about-right-container {
     display: flex;
     column-gap: 1.5rem;
@@ -261,8 +296,15 @@ button.get-in-touch {
     text-align: center;
     row-gap: 2rem;
     height: 230px;
+    cursor: pointer;
+    transition: all .5s;
 }
 
+.about-card:hover {
+    box-shadow: 10px 10px 5px 0px rgba(65,181,172,0.28);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(65,181,172,0.28);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(65,181,172,0.28);
+}
 .about-title {
     font-size: 24px;
     font-weight: 700;
@@ -424,7 +466,6 @@ footer.home {
     margin: 0 auto;
     padding: 6rem 0;
     margin-bottom: 8rem;
-
 }
 
 .contact-us-container {
@@ -450,8 +491,15 @@ footer.home {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+    transition: all .3s;
 }
 
+.contact-box:hover {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.23);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.23);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.23);
+}
 .contact-box-inner {
     width: 65%;
     margin: 0 auto;
